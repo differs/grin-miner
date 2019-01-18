@@ -170,7 +170,7 @@ impl Graph {
 	fn nodes(&self) -> impl Iterator<Item = &u32> {
 		self.adj_index.keys()
 	}
-
+// 	principle
 	fn walk_graph(&self, current: u32, target: u32, search: &mut Search) -> Result<(), String> {
 		if search.path.len() > 41 {
 			return Ok(());
@@ -180,6 +180,7 @@ impl Graph {
 			None => return Ok(()),
 			Some(it) => it,
 		};
+// 		solutions 
 		search.visit(current);
 		for ns in neighbors {
 			if ns == target && search.path.len() == 41 {
