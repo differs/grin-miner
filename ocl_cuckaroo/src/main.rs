@@ -21,6 +21,8 @@ fn main() -> Result<(), String> {
 		println!("Trimmed to {}", res.len());
 
 		start = SystemTime::now();
+		
+// 		Check!!!!!!!!!!!!!!
 		let sols = Graph::search(&res).unwrap();
 		end = SystemTime::now();
 		let elapsed = end.duration_since(start).unwrap();
